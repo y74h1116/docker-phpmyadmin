@@ -1,0 +1,14 @@
+services:
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin:5.2.1-apache
+    environment:
+      - PMA_ARBITRARY=1
+      #- PMA_HOST=host.docker.internal
+      #- PMA_PORT=3306
+      #- PMA_USER=yamadataro
+      #- PMA_PASSWORD=pass1234
+    ports:
+      - 60080:80
+    #volumes:
+    #  - ./phpmyadmin/sessions:/sessions
